@@ -2,9 +2,9 @@
 
 import axios from "axios"
 
-export const getPokemons = async (page: number) => {
+export const getPokemons = async (limit: number) => {
   try {
-    const url = `https://pokeapi.co/api/v2/pokemon?offset=${page}&limit=10`
+    const url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}`
     const { data } = await axios.get(url)
     return data
   } catch (err) {
