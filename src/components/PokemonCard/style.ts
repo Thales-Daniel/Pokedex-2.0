@@ -1,11 +1,19 @@
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 
-export const Card = styled.div`
-  width: 25%;
+export const PokeCard = styled(Link)`
+  width: 12.5rem;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
 `
 
-export const Image = styled.img`
+export const PokeSprite = styled.img`
+  background-color: #f2f2f2;
+  border-radius: 8px;
   width: 100%;
+`
+
+export const PokeId = styled.p`
+  color: #919ab8;
 `

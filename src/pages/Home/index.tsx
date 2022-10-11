@@ -1,11 +1,12 @@
 import React from "react"
 import PokemonList from "../../components/PokemonList"
+import Main from "./style"
 
 function Home() {
   return (
-    <main>
+    <Main>
       <PokemonList />
-    </main>
+    </Main>
   )
 }
 
