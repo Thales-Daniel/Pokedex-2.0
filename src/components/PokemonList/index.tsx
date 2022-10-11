@@ -1,8 +1,11 @@
 import React, { useCallback, useEffect, useState } from "react"
+
 import { getPokemons } from "../../services/getPokemons"
+import { PokemonType } from "../../shared/types/pokemonType"
+import PokemonCard from "../PokemonCard"
 
 function PokemonList() {
-  const [pokemonList, setPokemonList] = useState([])
+  const [pokemonList, setPokemonList] = useState<PokemonType[]>([])
   const [limit, setLimit] = useState(12)
 
   const getPokemonList = useCallback(async () => {
@@ -14,13 +17,11 @@ function PokemonList() {
     getPokemonList()
   }, [getPokemonList])
 
-  console.log(pokemonList)
-
   return (
     <section>
       <ul>
-        {pokemonList.map((pokes, index) => (
-          <li>{index}</li>
+        {pokemonList.map(({ name, url }) => (
+          <PokemonCard url={url} name={name} />
         ))}
       </ul>
       <button type="button" onClick={() => setLimit(limit + 12)}>
