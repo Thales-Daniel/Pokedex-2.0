@@ -18,16 +18,18 @@ function PokemonList() {
   }, [getPokemonList])
 
   return (
-    <section>
-      <ul>
-        {pokemonList.map(({ name, url }) => (
-          <PokemonCard url={url} name={name} />
-        ))}
-      </ul>
-      <button type="button" onClick={() => setLimit(limit + 12)}>
-        Carregar Mais pokemons
-      </button>
-    </section>
+    pokemonList && (
+      <section>
+        <ul>
+          {pokemonList.map(({ url, name }) => (
+            <PokemonCard key={name} url={url} />
+          ))}
+        </ul>
+        <button type="button" onClick={() => setLimit(limit + 12)}>
+          Carregar Mais pokemons
+        </button>
+      </section>
+    )
   )
 }
 

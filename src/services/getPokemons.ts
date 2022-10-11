@@ -12,6 +12,16 @@ export const getPokemons = async (limit: number) => {
   }
 }
 
+export const getPokeByUrl = async (url: string) => {
+  try {
+    const { data } = await axios.get(url)
+    return data
+  } catch (err) {
+    console.log(err)
+    return err
+  }
+}
+
 export const getPokemonByName = async (poke: string) => {
   try {
     const url = `https://pokeapi.co/api/v2/pokemon/${poke}`
