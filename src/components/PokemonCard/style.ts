@@ -15,5 +15,13 @@ export const PokeSprite = styled.img`
 `
 
 export const PokeId = styled.p`
-  color: #919ab8;
+  color: #919191;
+  font-size: 90%;
+  font-weight: bold;
+  padding: 5px;
+`
+
+export const PokeTittle = styled.h1`
+  color: #000;
+  margin: 10px 0;
 `

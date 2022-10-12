@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react"
 
 import { getPokeByUrl } from "../../services/getPokemons"
 import { PokemonDetails, PokemonType } from "../../shared/types/pokemonType"
-import { PokeId, PokeCard, PokeSprite } from "./style"
+import { PokeId, PokeCard, PokeSprite, PokeTittle } from "./style"
 
 function PokemonCard({ url }: PokemonType) {
   const [pokemonDetails, setPokemonsDetails] = useState({} as PokemonDetails)
@@ -24,7 +24,7 @@ function PokemonCard({ url }: PokemonType) {
           alt={`${pokemonDetails.name} sprite`}
         />
         <PokeId>Nº0{pokemonDetails.id}</PokeId>
-        <h1>{pokemonDetails.name}</h1>
+        <PokeTittle>{pokemonDetails.name}</PokeTittle>
       </PokeCard>
     )
   )
