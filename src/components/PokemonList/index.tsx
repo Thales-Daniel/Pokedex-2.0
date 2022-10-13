@@ -2,8 +2,8 @@ import React, { useCallback, useEffect, useState } from "react"
 
 import { getPokemons } from "../../services/getPokemons"
 import { PokemonType } from "../../shared/types/pokemonType"
+import InputFilter from "../InputFIlter"
 import PokemonCard from "../PokemonCard"
-import Loader from "../Loader"
 import { PokeContainer, PokeList, PokeButton } from "./style"
 
 function PokemonList() {
@@ -21,10 +21,9 @@ function PokemonList() {
     getPokemonList()
   }, [getPokemonList])
 
-  return loading ? (
-    <Loader />
-  ) : (
+  return (
     <PokeContainer>
+      <InputFilter />
       <PokeList>
         {pokemonList.map(({ url, name }) => (
           <PokemonCard key={name} url={url} />

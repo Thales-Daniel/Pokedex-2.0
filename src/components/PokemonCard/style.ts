@@ -11,6 +11,7 @@ export const PokeCard = styled(Link)`
 export const PokeSprite = styled.img`
   background-color: #f2f2f2;
   border-radius: 8px;
+  height: 100%;
   width: 100%;
 `
 

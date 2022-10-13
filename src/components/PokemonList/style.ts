@@ -16,6 +16,7 @@ export const PokeList = styled.ul`
   justify-content: center;
   max-width: 1024px;
 `
+
 export const PokeButton = styled.button`
   background-color: #30a7d7;
   border-radius: 5px;
