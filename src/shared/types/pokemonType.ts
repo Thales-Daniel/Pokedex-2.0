@@ -1,8 +1,3 @@
-export type PokemonType = {
-  name?: string
-  url: string
-}
-
 interface SpriteType {
   other: {
     "official-artwork": {
@@ -11,9 +6,15 @@ interface SpriteType {
   }
 }
 
-type PokemonElement = {
+export type PokemonElement = {
   name: string
   url: string
+}
+
+export type PokemonType = {
+  name?: string
+  url: string
+  pokemon?: PokemonElement
 }
 
 export type PokemonDetails = {

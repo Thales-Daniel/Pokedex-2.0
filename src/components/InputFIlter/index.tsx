@@ -1,20 +1,46 @@
-import React from "react"
+import React, { useState } from "react"
 
-import { InputContainer, Label, PokeDropbox, PokeInput } from "./style"
+import lupa from "../../shared/images/lupa.png"
 import typesPokemons from "../../shared/utils/arrayOfTypes"
+import {
+  InputContainer,
+  Label,
+  PokeDropbox,
+  PokeInput,
+  PokeButtonSearch,
+  ImagemSearch,
+} from "./style"
 
-function InputFilter() {
+type Props = {
+  setName: (_name: string) => void
+  setType: (_type: string) => void
+}
+
+function InputFilter({ setName, setType }: Props) {
+  const [inputValue, setInputValue] = useState("")
   return (
     <InputContainer>
       <Label>
         Nome:
-        <PokeInput type="text" placeholder="Ache seu Pokemon" />
+        <PokeInput
+          value={inputValue}
+          type="text"
+          placeholder="Ache seu Pokemon"
+          onChange={({ target }) => setInputValue(target.value)}
+        />
+        <PokeButtonSearch type="button" onClick={() => setName(inputValue)}>
+          <ImagemSearch src={lupa} alt="lupa" />
+        </PokeButtonSearch>
       </Label>
-      <Label>
+      <Label htmlFor="select">
         Type:
-        <PokeDropbox>
+        <PokeDropbox
+          onChange={(event) => setType(event.target.value)}
+          defaultValue="Selecione"
+        >
+          <option disabled>Selecione</option>
           {typesPokemons.map((type) => (
-            <option>{type}</option>
+            <option key={type}>{type}</option>
           ))}
         </PokeDropbox>
       </Label>

@@ -2,16 +2,6 @@
 
 import axios from "axios"
 
-export const getPokemons = async (limit: number) => {
-  try {
-    const url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}`
-    const { data } = await axios.get(url)
-    return data
-  } catch (err) {
-    console.log(err)
-  }
-}
-
 export const getPokeByUrl = async (url: string) => {
   try {
     const { data } = await axios.get(url)
@@ -25,6 +15,27 @@ export const getPokeByUrl = async (url: string) => {
 export const getPokemonByName = async (poke: string) => {
   try {
     const url = `https://pokeapi.co/api/v2/pokemon/${poke}`
+    const { data } = await axios.get(url)
+    return data
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+export const getByPokeType = async (type: string) => {
+  try {
+    const lowerType = type.toLocaleLowerCase()
+    const url = `https://pokeapi.co/api/v2/type/${lowerType}`
+    const { data } = await axios.get(url)
+    return data
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+export const getPokemons = async () => {
+  try {
+    const url = "https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0"
     const { data } = await axios.get(url)
     return data
   } catch (err) {

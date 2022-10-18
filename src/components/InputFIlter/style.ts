@@ -1,18 +1,18 @@
 import styled from "styled-components"
 
 export const InputContainer = styled.div`
-  width: 60%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 50px 0;
+  width: 60%;
 `
 export const PokeInput = styled.input`
   border-radius: 4px;
   outline: none;
   border: solid gray 1px;
   width: 200px;
-  height: 35px;
+  height: 30px;
   padding: 5px;
   font-size: large;
 `
@@ -21,16 +21,28 @@ export const Label = styled.label`
   font-size: 1.3rem;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 `
 
 export const PokeDropbox = styled.select`
-  flex-wrap: wrap;
-  border-radius: 4px;
-  outline: none;
   background-color: #ffff;
-  width: 150px;
-  height: 35px;
-  padding: 5px;
+  border-radius: 4px;
+  flex-wrap: wrap;
   font-size: medium;
+  height: 30px;
+  outline: none;
+  padding: 5px;
+  width: 150px;
+`
+export const PokeButtonSearch = styled.button`
+  height: 20px;
+  border: none;
+  outline: none;
+  width: 20px;
+`
+export const ImagemSearch = styled.img`
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-color: #ffff;
 `

@@ -10,7 +10,7 @@ function PokemonCard({ url }: PokemonType) {
   const getPokemon = useCallback(async () => {
     const pokeResult = await getPokeByUrl(url)
     setPokemonsDetails(pokeResult)
-  }, [url, setPokemonsDetails])
+  }, [setPokemonsDetails])
 
   useEffect(() => {
     getPokemon()
