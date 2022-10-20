@@ -4,7 +4,7 @@ import { getPokemons, getByPokeType } from "../../services/getPokemons"
 import { PokemonType } from "../../shared/types/pokemonType"
 import InputFilter from "../InputFIlter"
 import PokemonCard from "../PokemonCard"
-import { PokeContainer, PokeList, PokeButton } from "./style"
+import { PokeContainer, PokeList, PokeButton, NoPokeContainer } from "./style"
 
 function PokemonList() {
   const [pokemonList, setPokemonList] = useState<PokemonType[]>([])
@@ -13,17 +13,19 @@ function PokemonList() {
   const [limit, setLimit] = useState(12)
 
   const getPokemonList = useCallback(async () => {
-    if (filterType) {
+    if (filterType && filterType !== "Todos") {
       const { pokemon } = await getByPokeType(filterType)
       if (filterName) {
         const lowerSearch = filterName.toLocaleLowerCase()
-        const filterPoke = pokemon.filter((element: PokemonType) =>
-          element.pokemon?.name?.toLowerCase().includes(lowerSearch)
-        )
+        const filterPoke = pokemon
+          .filter((element: PokemonType) =>
+            element.pokemon?.name?.toLowerCase().includes(lowerSearch)
+          )
+          .slice(0, limit)
         setPokemonList(filterPoke)
         return
       }
-      setPokemonList(pokemon)
+      setPokemonList(pokemon.slice(0, limit))
       return
     }
     const { results } = await getPokemons()
@@ -57,7 +59,14 @@ function PokemonList() {
           />
         ))}
       </PokeList>
-      {filterName && filterType && (
+      {pokemonList.length === 0 ? (
+        <NoPokeContainer>
+          <h2>Nenhum Pokémon corresponde à sua pesquisa</h2>
+          <h3>Experimente estas sugestões para encontrar um Pokémon</h3>
+          <li>Verifique se o nome digitado está correto</li>
+          <li>Verifique também se ele é do tipo selecionado</li>
+        </NoPokeContainer>
+      ) : (
         <PokeButton type="button" onClick={() => setLimit(limit + 12)}>
           Carregar Mais pokemons
         </PokeButton>

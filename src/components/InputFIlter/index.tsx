@@ -21,7 +21,6 @@ function InputFilter({ setName, setType }: Props) {
   return (
     <InputContainer>
       <Label>
-        Nome:
         <PokeInput
           value={inputValue}
           type="text"
@@ -36,9 +35,9 @@ function InputFilter({ setName, setType }: Props) {
         Type:
         <PokeDropbox
           onChange={(event) => setType(event.target.value)}
-          defaultValue="Selecione"
+          defaultValue="Todos"
         >
-          <option disabled>Selecione</option>
+          <option>Todos</option>
           {typesPokemons.map((type) => (
             <option key={type}>{type}</option>
           ))}
