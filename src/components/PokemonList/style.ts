@@ -18,13 +18,16 @@ export const PokeList = styled.ul`
 `
 
 export const PokeButton = styled.button`
+  align-items: center;
   background-color: #30a7d7;
   border-radius: 5px;
   border: none;
   color: #ffff;
   cursor: pointer;
+  display: flex;
   height: 2rem;
-  margin: 15px 0;
+  justify-content: center;
+  margin: 55px 0 15px 0;
   padding: 0.75em 1.25em 0.675em;
   width: 12.5rem;
 `

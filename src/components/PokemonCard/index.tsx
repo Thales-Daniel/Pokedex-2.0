@@ -10,6 +10,7 @@ import {
   PokeDescription,
   PokeTypeContainer,
   PokeSpanTypeCard,
+  PokeLink,
 } from "./style"
 
 function PokemonCard({ url }: PokemonType) {
@@ -28,15 +29,17 @@ function PokemonCard({ url }: PokemonType) {
 
   return (
     pokemonDetails && (
-      <PokeCard to={`${name}`}>
-        <PokeSprite
-          src={
-            sprites?.other["official-artwork"]?.front_default
-              ? sprites?.other["official-artwork"]?.front_default
-              : sprites?.front_default
-          }
-          alt={`${pokemonDetails.name} sprite`}
-        />
+      <PokeCard>
+        <PokeLink to={`${name}`}>
+          <PokeSprite
+            src={
+              sprites?.other["official-artwork"]?.front_default
+                ? sprites?.other["official-artwork"]?.front_default
+                : sprites?.front_default
+            }
+            alt={`${pokemonDetails.name} sprite`}
+          />
+        </PokeLink>
         <PokeDescription>
           <PokeId>Nº0{id}</PokeId>
           <PokeTittle>{name}</PokeTittle>

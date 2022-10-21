@@ -24,7 +24,7 @@ function InputFilter({ setName, setType }: Props) {
         <PokeInput
           value={inputValue}
           type="text"
-          placeholder="Ache seu Pokemon"
+          placeholder="Find Your Pokemon"
           onChange={({ target }) => setInputValue(target.value)}
         />
         <PokeButtonSearch type="button" onClick={() => setName(inputValue)}>
@@ -35,9 +35,9 @@ function InputFilter({ setName, setType }: Props) {
         Type:
         <PokeDropbox
           onChange={(event) => setType(event.target.value)}
-          defaultValue="Todos"
+          defaultValue="All"
         >
-          <option>Todos</option>
+          <option>All</option>
           {typesPokemons.map((type) => (
             <option key={type}>{type}</option>
           ))}

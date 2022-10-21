@@ -3,11 +3,15 @@ import styled from "styled-components"
 
 import typeCardObject from "../../shared/utils/objectOfTypes"
 
-export const PokeCard = styled(Link)`
+export const PokeCard = styled.div`
   width: 12.5rem;
   display: flex;
   flex-direction: column;
   text-decoration: none;
+`
+export const PokeLink = styled(Link)`
+  width: 100%;
+  height: 100%;
 `
 
 export const PokeSprite = styled.img`
@@ -23,14 +27,12 @@ export const PokeDescription = styled.div`
 
 export const PokeId = styled.p`
   color: #919191;
-  font-size: 90%;
-  font-weight: bold;
-  padding: 5px;
+  font-size: 10px;
 `
 
 export const PokeTittle = styled.h3`
   color: #000;
-  margin: 10px 0;
+  margin: 5px 0;
 `
 
 export const PokeTypeContainer = styled.div`

@@ -14,7 +14,7 @@ function PokemonList() {
   const [limit, setLimit] = useState(12)
 
   const getPokemonList = useCallback(async () => {
-    if (filterType && filterType !== "Todos") {
+    if (filterType && filterType !== "All") {
       const { pokemon } = await getByPokeType(filterType)
       if (filterName) {
         const lowerSearch = filterName.toLocaleLowerCase()
@@ -64,7 +64,7 @@ function PokemonList() {
         <NoPokemon />
       ) : (
         <PokeButton type="button" onClick={() => setLimit(limit + 12)}>
-          Carregar Mais pokemons
+          Load more pokemons
         </PokeButton>
       )}
     </PokeContainer>
