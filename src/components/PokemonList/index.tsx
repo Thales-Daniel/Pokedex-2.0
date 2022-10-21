@@ -3,8 +3,9 @@ import React, { useCallback, useEffect, useState } from "react"
 import { getPokemons, getByPokeType } from "../../services/getPokemons"
 import { PokemonType } from "../../shared/types/pokemonType"
 import InputFilter from "../InputFIlter"
+import NoPokemon from "../NoPokeContainer"
 import PokemonCard from "../PokemonCard"
-import { PokeContainer, PokeList, PokeButton, NoPokeContainer } from "./style"
+import { PokeContainer, PokeList, PokeButton } from "./style"
 
 function PokemonList() {
   const [pokemonList, setPokemonList] = useState<PokemonType[]>([])
@@ -60,12 +61,7 @@ function PokemonList() {
         ))}
       </PokeList>
       {pokemonList.length === 0 ? (
-        <NoPokeContainer>
-          <h2>Nenhum Pokémon corresponde à sua pesquisa</h2>
-          <h3>Experimente estas sugestões para encontrar um Pokémon</h3>
-          <li>Verifique se o nome digitado está correto</li>
-          <li>Verifique também se ele é do tipo selecionado</li>
-        </NoPokeContainer>
+        <NoPokemon />
       ) : (
         <PokeButton type="button" onClick={() => setLimit(limit + 12)}>
           Carregar Mais pokemons
