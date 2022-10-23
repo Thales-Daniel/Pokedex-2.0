@@ -6,10 +6,10 @@ const NoPokeContainer = styled.ul`
   align-items: flex-start;
   flex-direction: column;
   width: 80%;
-  border: solid #f31a1a 1px;
-  gap: 15px;
-  padding: 22px;
-  border-radius: 8px;
+  border: solid #f31a1a 0.0625rem;
+  gap: 0.9375rem;
+  padding: 1.375rem;
+  border-radius: 0.5rem;
 
   & h2 {
     color: #f31a1a;
@@ -20,7 +20,7 @@ const NoPokeContainer = styled.ul`
   }
 
   & li {
-    margin-left: 20px;
+    margin-left: 1.25rem;
     color: #9193ad;
   }
 `

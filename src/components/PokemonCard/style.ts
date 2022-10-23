@@ -16,7 +16,7 @@ export const PokeLink = styled(Link)`
 
 export const PokeSprite = styled.img`
   background-color: #f2f2f2;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   height: 100%;
   width: 100%;
 `
@@ -27,30 +27,30 @@ export const PokeDescription = styled.div`
 
 export const PokeId = styled.p`
   color: #919191;
-  font-size: 10px;
+  font-size: 0.625rem;
 `
 
 export const PokeTittle = styled.h3`
   color: #000;
-  margin: 5px 0;
+  margin: 0.3125rem 0;
 `
 
 export const PokeTypeContainer = styled.div`
   width: 100%;
   display: flex;
-  gap: 5px;
+  gap: 0.3125rem;
   justify-content: flex-start;
   align-self: flex-start;
 `
 
 export const PokeSpanTypeCard = styled.span`
-  border-radius: 3px;
-  line-height: 18px;
-  max-width: 110px;
+  border-radius: 0.1875rem;
+  line-height: 1.125rem;
+  max-width: 6.875rem;
   margin: 0 1.5625% 0 0;
   width: 38.4375%;
   float: left;
-  font-size: 11px;
+  font-size: 0.6875rem;
   text-align: center;
   background: ${(props) => typeCardObject[props.theme].background};
   color: ${(props) => typeCardObject[props.theme].color};

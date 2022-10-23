@@ -5,50 +5,50 @@ export const InputContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 50px 0;
+  margin: 3.125rem 0;
   width: 80%;
 `
 export const PokeInput = styled.input`
-  border-radius: 4px;
+  border-radius: 0.25rem;
   outline: none;
-  border: solid gray 1px;
+  border: solid gray 0.0625rem;
   width: 100%;
-  height: 35px;
-  padding: 0 15px;
+  height: 2.1875rem;
+  padding: 0 0.9375rem;
   font-size: large;
 `
 export const Label = styled.label`
   align-items: center;
   display: flex;
   font-size: medium;
-  gap: 10px;
+  gap: 0.625rem;
 `
 
 export const PokeDropbox = styled.select`
   align-self: center;
   background-color: #ffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   display: flex;
   font-size: medium;
-  height: 35px;
+  height: 2.1875rem;
   justify-content: center;
   outline: none;
-  padding: 5px;
-  width: 150px;
+  padding: 0.3125rem;
+  width: 9.375rem;
 `
 export const PokeButtonSearch = styled.button`
   align-items: center;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   border: none;
   display: flex;
   height: fit-content;
   justify-content: center;
   outline: none;
-  padding: 8px;
+  padding: 0.5rem;
   width: fit-content;
 `
 export const ImagemSearch = styled.img`
   cursor: pointer;
-  height: 20px;
-  width: 20px;
+  height: 1.25rem;
+  width: 1.25rem;
 `

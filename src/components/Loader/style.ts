@@ -9,8 +9,8 @@ const isRotate = keyframes`
   }
 `
 const ImageLoader = styled.img`
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   transform: rotate(1turn);
   animation: ${isRotate} 1.2s infinite;
 `

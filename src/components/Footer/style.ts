@@ -1,0 +1,32 @@
+import styled from "styled-components"
+
+const PokeFooter = styled.footer`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1.875rem;
+  background-color: #1f1f1f;
+  color: #ffff;
+  height: fit-content;
+  justify-content: space-between;
+  align-items: center;
+
+  & p {
+    font-size: medium;
+  }
+
+  & span {
+    font-size: x-small;
+  }
+
+  & div {
+    padding: 0.3125rem;
+  }
+
+  & a {
+    color: #ffff;
+    padding: 5px;
+  }
+`
+
+export default PokeFooter
