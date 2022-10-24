@@ -10,6 +10,8 @@ const PokeFooter = styled.footer`
   height: fit-content;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  bottom: 0;
 
   & p {
     font-size: medium;

@@ -17,8 +17,8 @@ export const PokeLink = styled(Link)`
 export const PokeSprite = styled.img`
   background-color: #f2f2f2;
   border-radius: 0.5rem;
-  height: 100%;
-  width: 100%;
+  height: 12.5rem;
+  width: 12.5rem;
 `
 export const PokeDescription = styled.div`
   display: flex;
