@@ -21,7 +21,7 @@ function PokemonCard({ url }: PokemonType) {
   const getPokemon = useCallback(async () => {
     const pokeResult = await getPokeByUrl(url)
     setPokemonsDetails(pokeResult)
-    // setIsLoading(false)
+    setIsLoading(false)
   }, [setPokemonsDetails, setIsLoading])
 
   const { sprites, name, id } = pokemonDetails
