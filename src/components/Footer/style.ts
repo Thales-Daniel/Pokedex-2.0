@@ -4,7 +4,6 @@ const PokeFooter = styled.footer`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 1.875rem;
   background-color: #1f1f1f;
   color: #ffff;
   height: fit-content;

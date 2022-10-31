@@ -8,16 +8,16 @@ import PokemonCard from "../PokemonCard"
 import { PokeContainer, PokeList, PokeButton } from "./style"
 
 function PokemonList() {
-  const [pokemonList, setPokemonList] = useState<PokemonType[]>([])
+  const [pokemonList, setPokemonList] = useState<PokemonType[]>(Array(1))
   const [filterName, setFilterName] = useState("")
   const [filterType, setFilterType] = useState("")
   const [limit, setLimit] = useState(12)
 
   const getPokemonList = useCallback(async () => {
+    const lowerSearch = filterName.toLocaleLowerCase()
     if (filterType && filterType !== "All") {
       const { pokemon } = await getByPokeType(filterType)
       if (filterName) {
-        const lowerSearch = filterName.toLocaleLowerCase()
         const filterPoke = pokemon
           .filter((element: PokemonType) =>
             element.pokemon?.name?.toLowerCase().includes(lowerSearch)
@@ -30,7 +30,6 @@ function PokemonList() {
       return
     }
     const { results } = await getPokemons()
-    const lowerSearch = filterName.toLocaleLowerCase()
     const filterPoke = results.filter((element: PokemonType) =>
       element.name?.toLowerCase().includes(lowerSearch)
     )
@@ -60,12 +59,12 @@ function PokemonList() {
           />
         ))}
       </PokeList>
-      {pokemonList.length === 0 ? (
-        <NoPokemon />
-      ) : (
+      {pokemonList.length > 0 ? (
         <PokeButton type="button" onClick={() => setLimit(limit + 12)}>
           Load more pokemons
         </PokeButton>
+      ) : (
+        <NoPokemon />
       )}
     </PokeContainer>
   )
