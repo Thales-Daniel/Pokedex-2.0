@@ -36,7 +36,7 @@ function PokemonCard({ url }: PokemonType) {
         <SkeletonCards />
       ) : (
         <PokeCard>
-          <PokeLink to={`${name}`}>
+          <PokeLink to={`/pokemon/${name}`}>
             <PokeSprite
               src={
                 sprites?.other["official-artwork"]?.front_default
