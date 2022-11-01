@@ -1,11 +1,9 @@
 import React, { useState } from "react"
 
 import lupa from "../../shared/images/lupa.png"
-import typesPokemons from "../../shared/utils/arrayOfTypes"
 import {
   InputContainer,
   Label,
-  PokeDropbox,
   PokeInput,
   PokeButtonSearch,
   ImagemSearch,
@@ -13,10 +11,9 @@ import {
 
 type Props = {
   setName: (_name: string) => void
-  setType: (_type: string) => void
 }
 
-function InputFilter({ setName, setType }: Props) {
+function InputFilter({ setName }: Props) {
   const [inputValue, setInputValue] = useState("")
 
   const HandleSubmit = (event: any) => {
@@ -39,18 +36,6 @@ function InputFilter({ setName, setType }: Props) {
         >
           <ImagemSearch src={lupa} alt="lupa" />
         </PokeButtonSearch>
-      </Label>
-      <Label htmlFor="select">
-        Type:
-        <PokeDropbox
-          onChange={(event) => setType(event.target.value)}
-          defaultValue="All"
-        >
-          <option>All</option>
-          {typesPokemons.map((type) => (
-            <option key={type}>{type}</option>
-          ))}
-        </PokeDropbox>
       </Label>
     </InputContainer>
   )

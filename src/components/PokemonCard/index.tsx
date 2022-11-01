@@ -11,7 +11,6 @@ import {
   PokeDescription,
   PokeTypeContainer,
   PokeSpanTypeCard,
-  PokeLink,
 } from "./style"
 
 function PokemonCard({ url }: PokemonType) {
@@ -36,16 +35,14 @@ function PokemonCard({ url }: PokemonType) {
         <SkeletonCards />
       ) : (
         <PokeCard>
-          <PokeLink to={`/pokemon/${name}`}>
-            <PokeSprite
-              src={
-                sprites?.other["official-artwork"]?.front_default
-                  ? sprites?.other["official-artwork"]?.front_default
-                  : sprites?.front_default
-              }
-              alt={`${pokemonDetails.name} sprite`}
-            />
-          </PokeLink>
+          <PokeSprite
+            src={
+              sprites?.other["official-artwork"]?.front_default
+                ? sprites?.other["official-artwork"]?.front_default
+                : sprites?.front_default
+            }
+            alt={`${pokemonDetails.name} sprite`}
+          />
           <PokeDescription>
             <PokeId>Nº0{id}</PokeId>
             <PokeTittle>{name}</PokeTittle>

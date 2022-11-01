@@ -24,18 +24,6 @@ export const Label = styled.label`
   gap: 0.625rem;
 `
 
-export const PokeDropbox = styled.select`
-  align-self: center;
-  background-color: #ffff;
-  border-radius: 0.25rem;
-  display: flex;
-  font-size: medium;
-  height: 2.1875rem;
-  justify-content: center;
-  outline: none;
-  padding: 0.3125rem;
-  width: 9.375rem;
-`
 export const PokeButtonSearch = styled.button`
   align-items: center;
   border-radius: 0.5rem;

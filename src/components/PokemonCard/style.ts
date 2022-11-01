@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import styled from "styled-components"
 
 import typeCardObject from "../../shared/utils/objectOfTypes"
@@ -8,10 +7,6 @@ export const PokeCard = styled.div`
   display: flex;
   flex-direction: column;
   text-decoration: none;
-`
-export const PokeLink = styled(Link)`
-  width: 100%;
-  height: 100%;
 `
 
 export const PokeSprite = styled.img`

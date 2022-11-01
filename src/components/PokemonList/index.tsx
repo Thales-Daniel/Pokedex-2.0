@@ -44,13 +44,15 @@ function PokemonList() {
     filterName,
   ])
 
+  console.log(setFilterType)
+
   useEffect(() => {
     getPokemonList()
   }, [getPokemonList])
 
   return (
     <PokeContainer>
-      <InputFilter setName={setFilterName} setType={setFilterType} />
+      <InputFilter setName={setFilterName} />
       <PokeList>
         {pokemonList.map((item) => (
           <PokemonCard
