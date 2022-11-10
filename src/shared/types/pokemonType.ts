@@ -32,3 +32,7 @@ export type PokemonDetails = {
   sprites: SpriteType
   types: PokemonDetailsElements[]
 }
+
+export type PropsTypeFilter = {
+  setFilterType: (_filterType: string) => void
+}

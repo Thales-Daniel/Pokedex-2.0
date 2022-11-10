@@ -1,4 +1,5 @@
 const typesPokemons = [
+  "All",
   "Normal",
   "Fire",
   "Water",

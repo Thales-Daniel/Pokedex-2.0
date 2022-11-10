@@ -1,10 +1,15 @@
 import styled from "styled-components"
 
-export const PokeContainer = styled.section`
+export const PokeContainer = styled.div`
+  display: flex;
+`
+
+export const PokeContainerMain = styled.main`
   align-items: center;
   width: 64rem;
-  min-height: calc(75px - 199.5px + 100vh);
+  min-height: calc(4.6875rem - 12.4688rem + 100vh);
   display: flex;
+  border-left: solid #f2f2f2 0.0625rem;
   background-color: #ffff;
   flex-direction: column;
   justify-content: flex-start;

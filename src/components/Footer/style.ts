@@ -26,7 +26,7 @@ const PokeFooter = styled.footer`
 
   & a {
     color: #ffff;
-    padding: 5px;
+    padding: 0.3125rem;
   }
 `
 

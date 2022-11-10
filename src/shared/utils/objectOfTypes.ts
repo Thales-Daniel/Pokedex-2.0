@@ -36,11 +36,11 @@ const typeCardObject: cardType = {
     color: "#fff",
   },
   flying: {
-    background: "linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%)",
+    background: "linear-gradient(180deg, #758CBD 50%, #bdb9b8 50%)",
     color: "#212121",
   },
   ground: {
-    background: "linear-gradient(180deg, #f7de3f 50%, #ab9842 50%)",
+    background: "linear-gradient(180deg, #CE8056 50%, #ab9842 50%)",
     color: "#212121",
   },
   dragon: {

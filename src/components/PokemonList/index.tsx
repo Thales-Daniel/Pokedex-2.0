@@ -5,7 +5,8 @@ import { PokemonType } from "../../shared/types/pokemonType"
 import InputFilter from "../InputFIlter"
 import NoPokemon from "../NoPokeContainer"
 import PokemonCard from "../PokemonCard"
-import { PokeContainer, PokeList, PokeButton } from "./style"
+import TypeFilter from "../TypeFilter"
+import { PokeContainerMain, PokeList, PokeButton, PokeContainer } from "./style"
 
 function PokemonList() {
   const [pokemonList, setPokemonList] = useState<PokemonType[]>(Array(1))
@@ -44,30 +45,31 @@ function PokemonList() {
     filterName,
   ])
 
-  console.log(setFilterType)
-
   useEffect(() => {
     getPokemonList()
   }, [getPokemonList])
 
   return (
     <PokeContainer>
-      <InputFilter setName={setFilterName} />
-      <PokeList>
-        {pokemonList.map((item) => (
-          <PokemonCard
-            key={item.pokemon ? item.pokemon.name : item.name}
-            url={item.pokemon ? item.pokemon.url : item.url}
-          />
-        ))}
-      </PokeList>
-      {pokemonList.length > 0 ? (
-        <PokeButton type="button" onClick={() => setLimit(limit + 12)}>
-          Load more pokemons
-        </PokeButton>
-      ) : (
-        <NoPokemon />
-      )}
+      <TypeFilter setFilterType={setFilterType} />
+      <PokeContainerMain>
+        <InputFilter setName={setFilterName} />
+        <PokeList>
+          {pokemonList.map((item) => (
+            <PokemonCard
+              key={item.pokemon ? item.pokemon.name : item.name}
+              url={item.pokemon ? item.pokemon.url : item.url}
+            />
+          ))}
+        </PokeList>
+        {pokemonList.length > 0 ? (
+          <PokeButton type="button" onClick={() => setLimit(limit + 12)}>
+            Load more pokemons
+          </PokeButton>
+        ) : (
+          <NoPokemon />
+        )}
+      </PokeContainerMain>
     </PokeContainer>
   )
 }
