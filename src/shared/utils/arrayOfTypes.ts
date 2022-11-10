@@ -1,10 +1,10 @@
 const typesPokemons = [
   "All",
-  "Normal",
   "Fire",
   "Water",
   "Grass",
   "Flying",
+  "Normal",
   "Fighting",
   "Poison",
   "Electric",

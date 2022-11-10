@@ -45,7 +45,7 @@ const TypeAndIcons: cardType = {
   },
   normal: {
     src: normal,
-    color: "#a4acaf",
+    color: "black",
   },
   rock: {
     src: rock,

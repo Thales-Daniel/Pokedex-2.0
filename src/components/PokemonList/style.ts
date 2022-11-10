@@ -6,7 +6,7 @@ export const PokeContainer = styled.div`
 
 export const PokeContainerMain = styled.main`
   align-items: center;
-  width: 64rem;
+  max-width: 64rem;
   min-height: calc(4.6875rem - 12.4688rem + 100vh);
   display: flex;
   border-left: solid #f2f2f2 0.0625rem;

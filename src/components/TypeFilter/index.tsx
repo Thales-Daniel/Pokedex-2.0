@@ -7,10 +7,10 @@ import { PokeTypesUl, PokeTypeLi, PokeTypeLiNoActivy } from "./style"
 
 function TypeFilter({ setFilterType }: PropsTypeFilter) {
   const [color, setColor] = useState("#2C6AC1")
-  const [isActivy, setIsActivy] = useState("All")
+  const [filterColor, setFilterColor] = useState("All")
 
   const handleClick = (type: string) => {
-    setIsActivy(type)
+    setFilterColor(type)
     setFilterType(type)
     setColor(TypeAndIcons[type.toLocaleLowerCase()].color)
   }
@@ -18,7 +18,7 @@ function TypeFilter({ setFilterType }: PropsTypeFilter) {
   return (
     <PokeTypesUl>
       {typesPokemons.map((type: string) =>
-        isActivy !== type ? (
+        filterColor !== type ? (
           <PokeTypeLi
             key={type}
             onClick={() => handleClick(type)}
