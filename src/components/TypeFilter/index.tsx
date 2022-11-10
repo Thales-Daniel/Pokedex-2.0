@@ -9,8 +9,8 @@ function TypeFilter({ setFilterType }: PropsTypeFilter) {
   const [color, setColor] = useState("#2C6AC1")
   const [isActivy, setIsActivy] = useState("All")
 
-  const handleClick = (event: any, type: string) => {
-    setIsActivy(event.target.innerText)
+  const handleClick = (type: string) => {
+    setIsActivy(type)
     setFilterType(type)
     setColor(TypeAndIcons[type.toLocaleLowerCase()].color)
   }
@@ -21,7 +21,7 @@ function TypeFilter({ setFilterType }: PropsTypeFilter) {
         isActivy !== type ? (
           <PokeTypeLi
             key={type}
-            onClick={(event: any) => handleClick(event, type)}
+            onClick={() => handleClick(type)}
             theme={color}
           >
             <img

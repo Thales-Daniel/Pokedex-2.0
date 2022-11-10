@@ -9,7 +9,7 @@ export const PokeTypesUl = styled.ul`
   gap: 0.9375rem;
 `
 
-export const PokeTypeLiNoActivy = styled.li`
+export const PokeTypeLiNoActivy = styled.label`
   list-style: none;
   display: flex;
   gap: 10px;
@@ -17,7 +17,7 @@ export const PokeTypeLiNoActivy = styled.li`
   color: ${(props) => props.theme};
 `
 
-export const PokeTypeLi = styled.li`
+export const PokeTypeLi = styled.label`
   display: flex;
   filter: grayscale(100%);
   gap: 10px;
