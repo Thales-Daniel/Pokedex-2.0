@@ -1,12 +1,16 @@
 import React from "react"
 import { SkeletonTheme } from "react-loading-skeleton"
+
+import { ModalProvider } from "./contexts/ModalContext"
 import Router from "./router/Router"
 
 function App() {
   return (
-    <SkeletonTheme>
-      <Router />
-    </SkeletonTheme>
+    <ModalProvider>
+      <SkeletonTheme>
+        <Router />
+      </SkeletonTheme>
+    </ModalProvider>
   )
 }
 

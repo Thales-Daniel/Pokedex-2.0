@@ -2,15 +2,19 @@ import styled from "styled-components"
 
 import typeCardObject from "../../shared/utils/objectOfTypes"
 
-export const PokeCard = styled.div`
+export const PokeCard = styled.button`
   width: 12.5rem;
   display: flex;
   flex-direction: column;
-  text-decoration: none;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 51px -5px rgb(183 189 193 / 30%);
+  border: none;
+  cursor: pointer;
+  border-radius: 0.75rem;
 `
 
 export const PokeSprite = styled.img`
-  background-color: #f2f2f2;
   border-radius: 0.5rem;
   height: 12.5rem;
   width: 12.5rem;
