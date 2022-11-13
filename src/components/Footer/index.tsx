@@ -8,9 +8,10 @@ function Footer() {
     <PokeFooter>
       <ContainerIcons>
         <p>&copy; Created By Thales Daniel</p>
+        <span>found it interesting? hire me</span>
       </ContainerIcons>
       <ContainerIcons>
-        <span>See more content by clicking below</span>
+        <p>See more content by clicking below</p>
         <div>
           <a
             href="https://github.com/Thales-Daniel"

@@ -2,11 +2,11 @@ import styled from "styled-components"
 
 export const PokeHeader = styled.header`
   width: 100%;
-  height: 4rem;
-  background-color: rgb(247, 51, 51);
+  height: 5rem;
+  background-color: #3d5fb4;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 1.25rem;
 `
 
@@ -25,6 +25,7 @@ export const ContainerLogo = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-left: 50px;
 
   & p {
     text-align: center;

@@ -6,8 +6,8 @@ export const PokeFooter = styled.footer`
   margin-top: 30px;
   background-color: #3d5fb4;
   color: #ffff;
-  height: fit-content;
-  justify-content: space-around;
+  height: 5rem;
+  justify-content: space-between;
   align-items: center;
   position: relative;
   bottom: 0;
@@ -17,14 +17,7 @@ export const PokeFooter = styled.footer`
   }
 
   & span {
-    font-size: small;
-  }
-
-  & div {
-    padding: 0.3125rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: x-small;
   }
 
   & a {
@@ -34,6 +27,8 @@ export const PokeFooter = styled.footer`
 `
 
 export const ContainerIcons = styled.div`
+  margin: 0 1.875rem 0 1.875rem;
+  padding: 0.3125rem;
   display: flex;
   flex-direction: column;
   align-items: center;
