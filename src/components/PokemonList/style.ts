@@ -27,7 +27,7 @@ export const PokeList = styled.ul`
 
 export const PokeButton = styled.button`
   align-items: center;
-  background-color: #30a7d7;
+  background-color: #3d5fb4;
   border-radius: 0.3125rem;
   border: none;
   color: #ffff;

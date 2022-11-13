@@ -34,3 +34,14 @@ export const ContainerIcons = styled.div`
   align-items: center;
   justify-content: center;
 `
+export const CurriculunContainer = styled.div`
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    width: 23px;
+    height: 23px;
+  }
+`
