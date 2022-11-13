@@ -5,6 +5,6 @@ export type ProviderProps = {
 }
 
 export type ContextType = {
-  setModal: (_modal: boolean) => void
-  modal: boolean
+  setFilterName: (_modal: string) => void
+  filterName: string
 }

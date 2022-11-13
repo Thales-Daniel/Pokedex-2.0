@@ -6,7 +6,6 @@ export const InputContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 3.125rem 0;
-  width: 80%;
 `
 export const PokeInput = styled.input`
   border-radius: 0.25rem;

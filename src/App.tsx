@@ -1,16 +1,16 @@
 import React from "react"
 import { SkeletonTheme } from "react-loading-skeleton"
 
-import { ModalProvider } from "./contexts/ModalContext"
+import { FilterPokeProvider } from "./contexts/FilterPokeContext"
 import Router from "./router/Router"
 
 function App() {
   return (
-    <ModalProvider>
+    <FilterPokeProvider>
       <SkeletonTheme>
         <Router />
       </SkeletonTheme>
-    </ModalProvider>
+    </FilterPokeProvider>
   )
 }
 

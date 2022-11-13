@@ -5,7 +5,8 @@ const NoPokeContainer = styled.ul`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  width: 80%;
+  min-width: 61rem;
+  margin: 20px;
   border: solid #f31a1a 0.0625rem;
   gap: 0.9375rem;
   padding: 1.375rem;

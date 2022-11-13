@@ -1,8 +1,8 @@
-import React, { useCallback, useEffect, useState } from "react"
+import React, { useCallback, useContext, useEffect, useState } from "react"
+import { FilterPokeContext } from "../../contexts/FilterPokeContext"
 
 import { getPokemons, getByPokeType } from "../../services/getPokemons"
 import { PokemonType } from "../../shared/types/pokemonType"
-import InputFilter from "../InputFIlter"
 import NoPokemon from "../NoPokeContainer"
 import PokemonCard from "../PokemonCard"
 import TypeFilter from "../TypeFilter"
@@ -10,7 +10,7 @@ import { PokeContainerMain, PokeList, PokeButton, PokeContainer } from "./style"
 
 function PokemonList() {
   const [pokemonList, setPokemonList] = useState<PokemonType[]>(Array(1))
-  const [filterName, setFilterName] = useState("")
+  const { filterName } = useContext(FilterPokeContext)
   const [filterType, setFilterType] = useState("")
   const [limit, setLimit] = useState(12)
 
@@ -53,7 +53,6 @@ function PokemonList() {
     <PokeContainer>
       <TypeFilter setFilterType={setFilterType} />
       <PokeContainerMain>
-        <InputFilter setName={setFilterName} />
         <PokeList>
           {pokemonList.map((item) => (
             <PokemonCard

@@ -1,12 +1,20 @@
-import React from "react"
+import React, { useContext } from "react"
+import { FilterPokeContext } from "../../contexts/FilterPokeContext"
 
-import { HeaderImage, PokeHeader } from "./style"
-import pokeball from "../../shared/images/pokeball-Header.svg"
+import pokemonLogo from "../../shared/images/pokemon-logo-name.png"
+import InputFilter from "../InputFIlter"
+import { PokeHeader, PokemonLogo, ContainerLogo } from "./style"
 
 function Header() {
+  const { setFilterName } = useContext(FilterPokeContext)
+
   return (
     <PokeHeader>
-      <HeaderImage src={pokeball} alt="pokeball header" />
+      <ContainerLogo>
+        <PokemonLogo src={pokemonLogo} alt="pokemon name logo" />
+        <p>Find any pokemon you want</p>
+      </ContainerLogo>
+      <InputFilter setName={setFilterName} />
     </PokeHeader>
   )
 }

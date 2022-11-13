@@ -5,9 +5,8 @@ export const Container = styled.div`
 `
 
 export const ContainerModal = styled.div`
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 2022;
-  opacity: 50%;
 `
 
 export const Main = styled.main`

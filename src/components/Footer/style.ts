@@ -1,13 +1,13 @@
 import styled from "styled-components"
 
-const PokeFooter = styled.footer`
+export const PokeFooter = styled.footer`
   display: flex;
-  flex-direction: column;
   width: 100%;
-  background-color: #1f1f1f;
+  margin-top: 30px;
+  background-color: #3d5fb4;
   color: #ffff;
   height: fit-content;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   position: relative;
   bottom: 0;
@@ -17,11 +17,14 @@ const PokeFooter = styled.footer`
   }
 
   & span {
-    font-size: x-small;
+    font-size: small;
   }
 
   & div {
     padding: 0.3125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   & a {
@@ -30,4 +33,9 @@ const PokeFooter = styled.footer`
   }
 `
 
-export default PokeFooter
+export const ContainerIcons = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
