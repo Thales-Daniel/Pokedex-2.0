@@ -29,35 +29,34 @@ function PokemonCard({ url }: PokemonType) {
     getPokemon()
   }, [getPokemon])
 
-  return (
-    <div>
-      {isLoading ? (
-        <SkeletonCards />
-      ) : (
-        <PokeCard type="button">
-          <PokeSprite
-            src={
-              sprites?.other["official-artwork"]?.front_default
-                ? sprites?.other["official-artwork"]?.front_default
-                : sprites?.front_default
-            }
-            alt={`${pokemonDetails.name} sprite`}
-          />
-          <PokeDescription>
-            <PokeId>Nº0{id}</PokeId>
-            <PokeTittle>{name}</PokeTittle>
-          </PokeDescription>
-          <PokeTypeContainer>
-            {pokemonDetails.types?.map(({ type }) => (
-              <PokeSpanTypeCard key={type.name} theme={type.name}>
-                {type.name}
-              </PokeSpanTypeCard>
-            ))}
-          </PokeTypeContainer>
-        </PokeCard>
-      )}
-    </div>
-  )
+  if (sprites?.other["official-artwork"]?.front_default) {
+    return (
+      <div>
+        {isLoading ? (
+          <SkeletonCards />
+        ) : (
+          <PokeCard type="button">
+            <PokeSprite
+              src={sprites?.other["official-artwork"]?.front_default}
+              alt={`${pokemonDetails.name} sprite`}
+            />
+            <PokeDescription>
+              <PokeId>Nº0{id}</PokeId>
+              <PokeTittle>{name}</PokeTittle>
+            </PokeDescription>
+            <PokeTypeContainer>
+              {pokemonDetails.types?.map(({ type }) => (
+                <PokeSpanTypeCard key={type.name} theme={type.name}>
+                  {type.name}
+                </PokeSpanTypeCard>
+              ))}
+            </PokeTypeContainer>
+          </PokeCard>
+        )}
+      </div>
+    )
+  }
+  return null
 }
 
 export default PokemonCard

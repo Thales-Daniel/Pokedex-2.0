@@ -1,19 +1,19 @@
 import styled from "styled-components"
 
-export const PokeContainer = styled.div`
+export const PokeContainer = styled.main`
   display: flex;
 `
 
-export const PokeContainerMain = styled.main`
+export const PokeContainerContent = styled.div`
   align-items: center;
-  max-width: 64rem;
-  min-height: calc(4.6875rem - 12.4688rem + 100vh);
-  display: flex;
-  border-left: solid #f2f2f2 0.0625rem;
   background-color: #ffff;
+  display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0 auto;
+  min-height: calc(4.6875rem - 12.4688rem + 100vh);
+  position: relative;
 `
 
 export const PokeList = styled.ul`
@@ -22,7 +22,7 @@ export const PokeList = styled.ul`
   flex-wrap: wrap;
   gap: 0.625rem;
   justify-content: flex-start;
-  width: 85.49%;
+  max-width: 64rem;
 `
 
 export const PokeButton = styled.button`
@@ -35,7 +35,7 @@ export const PokeButton = styled.button`
   display: flex;
   height: 2rem;
   justify-content: center;
-  margin: 3.4375rem 0 3.125rem 0;
+  margin: 3.4375rem 5rem 3.125rem 0;
   padding: 0.75em 1.25em 0.675em;
   width: 12.5rem;
 `

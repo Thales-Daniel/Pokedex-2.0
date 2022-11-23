@@ -6,7 +6,12 @@ import { PokemonType } from "../../shared/types/pokemonType"
 import NoPokemon from "../NoPokeContainer"
 import PokemonCard from "../PokemonCard"
 import TypeFilter from "../TypeFilter"
-import { PokeContainerMain, PokeList, PokeButton, PokeContainer } from "./style"
+import {
+  PokeContainerContent,
+  PokeList,
+  PokeButton,
+  PokeContainer,
+} from "./style"
 
 function PokemonList() {
   const [pokemonList, setPokemonList] = useState<PokemonType[]>(Array(1))
@@ -52,7 +57,7 @@ function PokemonList() {
   return (
     <PokeContainer>
       <TypeFilter setFilterType={setFilterType} />
-      <PokeContainerMain>
+      <PokeContainerContent>
         <PokeList>
           {pokemonList.map((item) => (
             <PokemonCard
@@ -68,7 +73,7 @@ function PokemonList() {
         ) : (
           <NoPokemon />
         )}
-      </PokeContainerMain>
+      </PokeContainerContent>
     </PokeContainer>
   )
 }

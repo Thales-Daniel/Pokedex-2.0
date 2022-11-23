@@ -8,9 +8,3 @@ export const ContainerModal = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2022;
 `
-
-export const Main = styled.main`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
