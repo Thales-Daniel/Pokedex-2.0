@@ -1,7 +1,5 @@
 import styled from "styled-components"
 
-// import TypeAndIcons from "../../shared/utils/TypeAndIcons"
-
 export const PokeTypesUl = styled.ul`
   display: flex;
   flex-direction: column;

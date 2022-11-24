@@ -36,3 +36,8 @@ export type PokemonDetails = {
 export type PropsTypeFilter = {
   setFilterType: (_filterType: string) => void
 }
+
+export type TypesDetailsProps = {
+  types: string[]
+  weaknesses: string[]
+}

@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react"
 
 import { getPokeByUrl } from "../../services/getPokemons"
+import { PokeSpanTypeCard } from "../../shared/styles/GlobalStyles"
 import { PokemonDetails, PokemonType } from "../../shared/types/pokemonType"
 import SkeletonCards from "../SkeletonCards"
 import {
@@ -10,7 +11,7 @@ import {
   PokeTittle,
   PokeDescription,
   PokeTypeContainer,
-  PokeSpanTypeCard,
+  DetailsLink,
 } from "./style"
 
 function PokemonCard({ url }: PokemonType) {
@@ -36,10 +37,12 @@ function PokemonCard({ url }: PokemonType) {
           <SkeletonCards />
         ) : (
           <PokeCard type="button">
-            <PokeSprite
-              src={sprites?.other["official-artwork"]?.front_default}
-              alt={`${pokemonDetails.name} sprite`}
-            />
+            <DetailsLink to={`/details/${name}`}>
+              <PokeSprite
+                src={sprites?.other["official-artwork"]?.front_default}
+                alt={`${pokemonDetails.name} sprite`}
+              />
+            </DetailsLink>
             <PokeDescription>
               <PokeId>Nº0{id}</PokeId>
               <PokeTittle>{name}</PokeTittle>
