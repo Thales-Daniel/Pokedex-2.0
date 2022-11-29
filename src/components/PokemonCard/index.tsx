@@ -49,7 +49,12 @@ function PokemonCard({ url }: PokemonType) {
             </PokeDescription>
             <PokeTypeContainer>
               {pokemonDetails.types?.map(({ type }) => (
-                <PokeSpanTypeCard key={type.name} theme={type.name}>
+                <PokeSpanTypeCard
+                  height=""
+                  fontSize=""
+                  key={type.name}
+                  theme={type.name}
+                >
                   {type.name}
                 </PokeSpanTypeCard>
               ))}

@@ -21,8 +21,8 @@ function DetailsMain() {
   const getPoke = useCallback(async () => {
     if (name) {
       const result = await getPokemonByName(name)
-      console.log(result)
       setDetails(result)
+      console.log(result)
     }
   }, [setDetails, name])
 
@@ -43,7 +43,7 @@ function DetailsMain() {
         </NameIdContainer>
       </ContainerSpriteDiv>
       <TypeContainerDetails
-        types={["grass, poison"]}
+        types={["grass", "poison"]}
         weaknesses={["steel", "fire"]}
       />
     </Main>

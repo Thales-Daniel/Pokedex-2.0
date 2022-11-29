@@ -5,22 +5,27 @@ import typeCardObject from "../../shared/utils/objectOfTypes"
 export const GlobalStyle = createGlobalStyle`
 
   * {
-    font-family: "Saira", sans-serif;
     box-sizing: border-box;
-    padding: 0;
+    font-family: "Saira", sans-serif;
     margin: 0;
+    padding: 0;
   }
 `
 
-export const PokeSpanTypeCard = styled.span`
+export const PokeSpanTypeCard = styled.span<{
+  fontSize: string
+  height: string
+}>`
+  align-items: center;
+  background: ${(props) => typeCardObject[props.theme].background};
   border-radius: 0.1875rem;
+  color: ${(props) => typeCardObject[props.theme].color};
+  display: flex;
+  float: left;
+  font-size: ${(props) => (props.fontSize ? props.fontSize : "0.6875rem")};
+  height: ${(props) => (props.height ? props.height : "")};
+  justify-content: center;
   line-height: 1.125rem;
   max-width: 6.875rem;
-  margin: 0 1.5625% 0 0;
   width: 38.4375%;
-  float: left;
-  font-size: 0.6875rem;
-  text-align: center;
-  background: ${(props) => typeCardObject[props.theme].background};
-  color: ${(props) => typeCardObject[props.theme].color};
 `
