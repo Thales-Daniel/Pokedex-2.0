@@ -3,6 +3,7 @@ import React, { useCallback, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { getPokemonByName } from "../../services/getPokemons"
 import { PokemonDetails } from "../../shared/types/pokemonType"
+import BaseStatsContainer from "../BaseStatsContainer"
 import TypeContainerDetails from "../TypesContainerDetails"
 import {
   ContainerSpriteDiv,
@@ -11,6 +12,7 @@ import {
   NameIdContainer,
   NameSpan,
   SpriteImg,
+  ContainerAside,
 } from "./style"
 
 function DetailsMain() {
@@ -42,10 +44,13 @@ function DetailsMain() {
           <IdSpan>Nº 0{details?.id}</IdSpan>
         </NameIdContainer>
       </ContainerSpriteDiv>
-      <TypeContainerDetails
-        types={["grass", "poison"]}
-        weaknesses={["steel", "fire"]}
-      />
+      <ContainerAside>
+        <TypeContainerDetails
+          types={["grass", "poison"]}
+          weaknesses={["steel", "fire", "electric", "ground", "psychic"]}
+        />
+        <BaseStatsContainer stat="HP" value={10} />
+      </ContainerAside>
     </Main>
   )
 }

@@ -20,6 +20,14 @@ export type PokemonDetailsElements = {
   }
 }
 
+export type PokemonStatsType = {
+  base_stat: number
+  stat: {
+    name: string
+    url: string
+  }
+}
+
 export type PokemonType = {
   name?: string
   url: string
@@ -31,6 +39,7 @@ export type PokemonDetails = {
   id: number
   sprites: SpriteType
   types: PokemonDetailsElements[]
+  stats: PokemonStatsType[]
 }
 
 export type PropsTypeFilter = {

@@ -3,10 +3,10 @@ import styled from "styled-components"
 export const TypesContainerDiv = styled.div`
   display: flex;
   flex-direction: column;
-  width: 33%;
+  width: 30rem;
   gap: 1.25rem;
-  font-size: x-large;
-  padding: 1rem;
+  font-size: 2vw;
+  padding: 0.625rem;
 `
 
 export const WeaknessesAndTypesDiv = styled.div`
@@ -19,4 +19,5 @@ export const WeaknessesAndTypesDiv = styled.div`
 export const CardContainerDiv = styled.div`
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 `

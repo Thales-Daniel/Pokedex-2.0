@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Main = styled.main`
   display: flex;
-  width: 100%;
+  width: 80%;
 `
 
 export const ContainerSpriteDiv = styled.div`
@@ -28,4 +28,10 @@ export const IdSpan = styled.span`
 `
 export const NameSpan = styled.span`
   font-size: 120%;
+`
+
+export const ContainerAside = styled.aside`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 `
