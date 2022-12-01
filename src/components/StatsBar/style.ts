@@ -3,13 +3,13 @@ import styled from "styled-components"
 const BarDiv = styled.div<{ width: string }>`
   align-items: center;
   background-color: #3d5fb4;
-  border-radius: 0.3125rem;
+  border-radius: 3px;
   color: #ffff;
-  min-width: 1.25rem;
-  font-size: 1.2vw;
+  min-width: 0.625rem;
+  font-size: small;
   display: flex;
-  padding: 0.3125rem;
-  height: 1.25rem;
+  padding: 2px;
+  height: 1rem;
   width: ${(props) => props.width};
 `
 

@@ -24,7 +24,7 @@ function DetailsMain() {
     if (name) {
       const result = await getPokemonByName(name)
       setDetails(result)
-      console.log(result)
+      console.log(details?.stats)
     }
   }, [setDetails, name])
 
@@ -49,7 +49,7 @@ function DetailsMain() {
           types={["grass", "poison"]}
           weaknesses={["steel", "fire", "electric", "ground", "psychic"]}
         />
-        <BaseStatsContainer stat="HP" value={10} />
+        <BaseStatsContainer stats={details?.stats} />
       </ContainerAside>
     </Main>
   )

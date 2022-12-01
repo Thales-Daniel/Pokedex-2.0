@@ -1,14 +1,26 @@
 import React from "react"
 
-import { BaseStatContainerSection, StatsBarContainerDiv } from "./style"
+import {
+  BaseStatContainerSection,
+  NameContainer,
+  StatsBarContainerDiv,
+} from "./style"
 import StatsBar from "../StatsBar"
+import { PokemonStatsType } from "../../shared/types/pokemonType"
 
-function BaseStatsContainer({ stat, value }: { stat: string; value: number }) {
+function BaseStatsContainer({ stats }: { stats: PokemonStatsType[] }) {
   return (
     <BaseStatContainerSection>
       <StatsBarContainerDiv>
-        <strong>{stat}</strong>
-        <StatsBar width={value} />
+        {stats?.map(({ stat }) => (
+          <NameContainer>{stat.name}</NameContainer>
+        ))}
+      </StatsBarContainerDiv>
+
+      <StatsBarContainerDiv>
+        {stats?.map(({ base_stat: baseState }) => (
+          <StatsBar width={baseState} />
+        ))}
       </StatsBarContainerDiv>
     </BaseStatContainerSection>
   )

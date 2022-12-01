@@ -66,13 +66,12 @@ function PokemonList() {
             />
           ))}
         </PokeList>
-        {pokemonList.length > 0 ? (
+        {filterName ? null : (
           <PokeButton type="button" onClick={() => setLimit(limit + 12)}>
             Load more pokemons
           </PokeButton>
-        ) : (
-          <NoPokemon />
         )}
+        {pokemonList.length === 0 && <NoPokemon />}
       </PokeContainerContent>
     </PokeContainer>
   )
