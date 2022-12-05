@@ -5,7 +5,7 @@ export const TypesContainerDiv = styled.div`
   flex-direction: column;
   width: 30rem;
   gap: 1.25rem;
-  font-size: 2vw;
+  font-size: 1.4rem;
   padding: 0.625rem;
 `
 

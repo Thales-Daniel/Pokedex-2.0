@@ -42,3 +42,13 @@ export const getPokemons = async () => {
     console.error(err)
   }
 }
+
+export const getTypesDetails = async (type: string) => {
+  try {
+    const url = `https://pokeapi.co/api/v2/type/${type}`
+    const { data } = await axios.get(url)
+    return data
+  } catch (err) {
+    console.error(err)
+  }
+}

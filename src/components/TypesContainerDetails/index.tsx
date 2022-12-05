@@ -1,5 +1,8 @@
-import React from "react"
+/* eslint-disable no-unused-vars */
+/* eslint-disable array-callback-return */
+import React, { useCallback, useEffect, useState } from "react"
 
+import { getTypesDetails } from "../../services/getPokemons"
 import { PokeSpanTypeCard } from "../../shared/styles/GlobalStyles"
 import { TypesDetailsProps } from "../../shared/types/pokemonType"
 import {
@@ -8,20 +11,54 @@ import {
   CardContainerDiv,
 } from "./style"
 
-function TypeContainerDetails({ types, weaknesses }: TypesDetailsProps) {
+function TypeContainerDetails({ types }: TypesDetailsProps) {
+  const [weakness, setWeakness] = useState<string[]>([])
+  const [halfDamage, setHalfDamage] = useState<string[]>([])
+  const arrWeakness: string[] = []
+  const arrHalf: string[] = []
+
+  const getTypes = useCallback(async () => {
+    if (types) {
+      const { damage_relations: damageRelations } = await getTypesDetails(
+        types[0].type.name
+      )
+      damageRelations.double_damage_from.map(({ name }: { name: string }) =>
+        arrWeakness.push(name)
+      )
+
+      if (types[1]) {
+        const { damage_relations: damage } = await getTypesDetails(
+          types[1].type.name
+        )
+
+        damage.double_damage_from.map(({ name }: { name: string }) => {
+          if (!arrWeakness.includes(name)) {
+            arrWeakness.push(name)
+          }
+        })
+        setWeakness(arrWeakness)
+      }
+    }
+  }, [types, setWeakness, getTypesDetails])
+
+  useEffect(() => {
+    getTypes()
+    console.log(arrWeakness)
+  }, [getTypes])
+
   return (
     <TypesContainerDiv>
       <WeaknessesAndTypesDiv>
         Types
         <CardContainerDiv>
-          {types.map((type: string) => (
+          {types?.map(({ type }) => (
             <PokeSpanTypeCard
-              height="2rem"
-              fontSize="1.2rem"
-              key={type}
-              theme={type}
+              height="1.6rem"
+              fontSize="1rem"
+              key={type.name}
+              theme={type.name}
             >
-              {type}
+              {type.name}
             </PokeSpanTypeCard>
           ))}
         </CardContainerDiv>
@@ -30,10 +67,10 @@ function TypeContainerDetails({ types, weaknesses }: TypesDetailsProps) {
       <WeaknessesAndTypesDiv>
         Weaknesses
         <CardContainerDiv>
-          {weaknesses.map((weak: string) => (
+          {weakness?.map((weak: string) => (
             <PokeSpanTypeCard
-              height="2rem"
-              fontSize="1.2rem"
+              height="1.6rem"
+              fontSize="1rem"
               key={weak}
               theme={weak}
             >

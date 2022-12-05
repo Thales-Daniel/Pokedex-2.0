@@ -24,7 +24,6 @@ function DetailsMain() {
     if (name) {
       const result = await getPokemonByName(name)
       setDetails(result)
-      console.log(details?.stats)
     }
   }, [setDetails, name])
 
@@ -45,10 +44,7 @@ function DetailsMain() {
         </NameIdContainer>
       </ContainerSpriteDiv>
       <ContainerAside>
-        <TypeContainerDetails
-          types={["grass", "poison"]}
-          weaknesses={["steel", "fire", "electric", "ground", "psychic"]}
-        />
+        <TypeContainerDetails types={details?.types} />
         <BaseStatsContainer stats={details?.stats} />
       </ContainerAside>
     </Main>

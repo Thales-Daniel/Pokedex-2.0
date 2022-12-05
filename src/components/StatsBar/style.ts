@@ -6,7 +6,7 @@ const BarDiv = styled.div<{ width: string }>`
   border-radius: 3px;
   color: #ffff;
   min-width: 0.625rem;
-  font-size: small;
+  font-size: medium;
   display: flex;
   padding: 2px;
   height: 1rem;

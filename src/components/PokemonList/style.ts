@@ -20,7 +20,7 @@ export const PokeList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 0.625rem;
-  justify-content: flex-start;
+  justify-content: center;
   max-width: 64rem;
 `
 

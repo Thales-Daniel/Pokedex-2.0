@@ -27,6 +27,7 @@
     "consistent-return": "off",
     "import/extensions": "off",
     "import/no-unresolved": "off",
+    "array-callback-return": "off",
     "react/jsx-filename-extension": [
       1,
       { "extensions": [".js", ".jsx", "tsx", "ts"] }

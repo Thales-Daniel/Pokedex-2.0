@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const Main = styled.main`
   display: flex;
+  justify-content: center;
   width: 80%;
 `
 
@@ -33,5 +34,4 @@ export const NameSpan = styled.span`
 export const ContainerAside = styled.aside`
   display: flex;
   flex-direction: column;
-  width: 100%;
 `
