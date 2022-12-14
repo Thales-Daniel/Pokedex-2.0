@@ -34,7 +34,19 @@ export type PokemonType = {
   pokemon?: PokemonElement
 }
 
+type Ability = {
+  ability: {
+    name: string
+    url: string
+  }
+  is_hidden: boolean
+}
+
 export type PokemonDetails = {
+  weight: number
+  height: number
+  base_experience: number
+  abilities: Ability[]
   name: string
   id: number
   sprites: SpriteType

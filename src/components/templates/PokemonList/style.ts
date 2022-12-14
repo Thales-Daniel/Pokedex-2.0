@@ -1,7 +1,8 @@
 import styled from "styled-components"
 
 export const PokeContainer = styled.main`
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.6fr 3fr 0.4fr;
 `
 
 export const PokeContainerContent = styled.div`
@@ -17,10 +18,11 @@ export const PokeContainerContent = styled.div`
 
 export const PokeList = styled.ul`
   align-items: center;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 0.625rem;
-  justify-content: center;
+  justify-content: flex-start;
   max-width: 64rem;
 `
 

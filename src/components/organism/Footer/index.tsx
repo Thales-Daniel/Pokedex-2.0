@@ -2,7 +2,7 @@ import React from "react"
 import { VscGithub } from "react-icons/vsc"
 import { AiOutlineLinkedin } from "react-icons/ai"
 
-import curriculumIcon from "../../shared/images/curriculum.png"
+import curriculumIcon from "../../../shared/images/curriculum.png"
 import { PokeFooter, ContainerIcons, CurriculunContainer } from "./style"
 
 function Footer() {

@@ -1,11 +1,11 @@
 import React, { useCallback, useContext, useEffect, useState } from "react"
-import { FilterPokeContext } from "../../contexts/FilterPokeContext"
+import { FilterPokeContext } from "../../../contexts/FilterPokeContext"
 
-import { getPokemons, getByPokeType } from "../../services/getPokemons"
-import { PokemonType } from "../../shared/types/pokemonType"
-import NoPokemon from "../NoPokeContainer"
-import PokemonCard from "../PokemonCard"
-import TypeFilter from "../TypeFilter"
+import { getPokemons, getByPokeType } from "../../../services/getPokemons"
+import { PokemonType } from "../../../shared/types/pokemonType"
+import NoPokemon from "../../molecules/NoPokeContainer"
+import PokemonCard from "../../molecules/PokemonCard"
+import TypeFilter from "../../molecules/TypeFilterPokeList"
 import {
   PokeContainerContent,
   PokeList,

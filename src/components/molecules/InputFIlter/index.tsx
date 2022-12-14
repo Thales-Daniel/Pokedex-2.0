@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-import lupa from "../../shared/images/lupa.png"
+import lupa from "../../../shared/images/lupa.png"
 import {
   InputContainer,
   Label,

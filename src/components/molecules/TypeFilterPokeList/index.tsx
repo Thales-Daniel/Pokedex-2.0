@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 
-import typesPokemons from "../../shared/utils/arrayOfTypes"
-import { PropsTypeFilter } from "../../shared/types/pokemonType"
-import TypeAndIcons from "../../shared/utils/TypeAndIcons"
+import typesPokemons from "../../../shared/utils/arrayOfTypes"
+import { PropsTypeFilter } from "../../../shared/types/pokemonType"
+import TypeAndIcons from "../../../shared/utils/TypeAndIcons"
 import { PokeTypesUl, PokeTypeLi, PokeTypeLiNoActivy } from "./style"
 
 function TypeFilter({ setFilterType }: PropsTypeFilter) {

@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from "react"
 
-import { getPokeByUrl } from "../../services/getPokemons"
-import { PokeSpanTypeCard } from "../../shared/styles/GlobalStyles"
-import { PokemonDetails, PokemonType } from "../../shared/types/pokemonType"
+import { getPokeByUrl } from "../../../services/getPokemons"
+import { PokeSpanTypeCard } from "../../../shared/styles/GlobalStyles"
+import { PokemonDetails, PokemonType } from "../../../shared/types/pokemonType"
 import SkeletonCards from "../SkeletonCards"
 import {
   PokeId,

@@ -3,10 +3,9 @@ import styled from "styled-components"
 export const TypesContainerDiv = styled.div`
   display: flex;
   flex-direction: column;
-  width: 30rem;
+  width: 22rem;
   gap: 1.25rem;
   font-size: 1.4rem;
-  padding: 0.625rem;
 `
 
 export const WeaknessesAndTypesDiv = styled.div`

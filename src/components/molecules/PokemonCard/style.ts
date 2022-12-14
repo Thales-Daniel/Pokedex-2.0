@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import styled from "styled-components"
 
 export const PokeCard = styled.button`
-  width: 12.5rem;
+  width: 15.5rem;
   display: flex;
   flex-direction: column;
   padding: 10px;

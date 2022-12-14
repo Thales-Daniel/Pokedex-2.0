@@ -1,10 +1,8 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable array-callback-return */
 import React, { useCallback, useEffect, useState } from "react"
 
-import { getTypesDetails } from "../../services/getPokemons"
-import { PokeSpanTypeCard } from "../../shared/styles/GlobalStyles"
-import { TypesDetailsProps } from "../../shared/types/pokemonType"
+import { getTypesDetails } from "../../../services/getPokemons"
+import { PokeSpanTypeCard } from "../../../shared/styles/GlobalStyles"
+import { TypesDetailsProps } from "../../../shared/types/pokemonType"
 import {
   WeaknessesAndTypesDiv,
   TypesContainerDiv,
@@ -13,7 +11,6 @@ import {
 
 function TypeContainerDetails({ types }: TypesDetailsProps) {
   const [weakness, setWeakness] = useState<string[]>([])
-  const [halfDamage, setHalfDamage] = useState<string[]>([])
   const arrWeakness: string[] = []
   const arrHalf: string[] = []
 
@@ -26,6 +23,10 @@ function TypeContainerDetails({ types }: TypesDetailsProps) {
         arrWeakness.push(name)
       )
 
+      damageRelations.half_damage_from.map(({ name }: { name: string }) =>
+        arrHalf.push(name)
+      )
+
       if (types[1]) {
         const { damage_relations: damage } = await getTypesDetails(
           types[1].type.name
@@ -36,14 +37,22 @@ function TypeContainerDetails({ types }: TypesDetailsProps) {
             arrWeakness.push(name)
           }
         })
-        setWeakness(arrWeakness)
+
+        damage.half_damage_from.map(({ name }: { name: string }) =>
+          arrHalf.push(name)
+        )
       }
+
+      const filterWeakes = arrWeakness.filter(
+        (item: string) => !arrHalf.includes(item)
+      )
+
+      setWeakness(filterWeakes)
     }
   }, [types, setWeakness, getTypesDetails])
 
   useEffect(() => {
     getTypes()
-    console.log(arrWeakness)
   }, [getTypes])
 
   return (

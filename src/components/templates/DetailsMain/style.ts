@@ -2,29 +2,37 @@ import styled from "styled-components"
 
 export const Main = styled.main`
   display: flex;
-  justify-content: center;
-  width: 80%;
+  flex-direction: column;
+  width: 85%;
+  gap: 1.5625rem;
 `
 
 export const ContainerSpriteDiv = styled.div`
   display: flex;
-  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 `
 
 export const SpriteImg = styled.img`
   background-color: whitesmoke;
   border-radius: 0.5rem;
-  width: 25rem;
+  width: 30rem;
 `
 
-export const NameIdContainer = styled.div`
+export const NameSpriteDiv = styled.div`
   display: flex;
+  flex-direction: column;
   align-self: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 0.625rem;
 `
 
 export const IdSpan = styled.span`
   font-size: 120%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 200%;
 `
 export const NameSpan = styled.span`
@@ -34,4 +42,6 @@ export const NameSpan = styled.span`
 export const ContainerAside = styled.aside`
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1.25rem;
 `

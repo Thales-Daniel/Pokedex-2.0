@@ -1,5 +1,5 @@
 import React from "react"
-import DetailsMain from "../../components/DetailsMain"
+import DetailsMain from "../../components/templates/DetailsMain"
 
 import { DetailsContainer } from "./style"
 

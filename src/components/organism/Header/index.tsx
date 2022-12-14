@@ -1,8 +1,8 @@
 import React, { useContext } from "react"
-import { FilterPokeContext } from "../../contexts/FilterPokeContext"
+import { FilterPokeContext } from "../../../contexts/FilterPokeContext"
 
-import pokemonLogo from "../../shared/images/pokemon-logo-name.png"
-import InputFilter from "../InputFIlter"
+import pokemonLogo from "../../../shared/images/pokemon-logo-name.png"
+import InputFilter from "../../molecules/InputFIlter"
 import { PokeHeader, PokemonLogo, ContainerLogo } from "./style"
 
 function Header() {

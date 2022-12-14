@@ -1,8 +1,8 @@
 import React from "react"
 
-import Footer from "../../components/Footer"
-import Header from "../../components/Header"
-import PokemonList from "../../components/PokemonList"
+import Footer from "../../components/organism/Footer"
+import Header from "../../components/organism/Header"
+import PokemonList from "../../components/templates/PokemonList"
 import { Container } from "./style"
 
 function Home() {
