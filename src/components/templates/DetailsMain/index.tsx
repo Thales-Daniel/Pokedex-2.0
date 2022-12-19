@@ -3,17 +3,9 @@ import React, { useCallback, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { getPokemonByName } from "../../../services/getPokemons"
 import { PokemonDetails } from "../../../shared/types/pokemonType"
-import BaseStatsContainer from "../../molecules/BaseStatsContainer"
-import InforPokeDetails from "../../organism/InforPokeDetails"
-import TypeContainerDetails from "../../organism/TypesContainerDetails"
-import {
-  ContainerSpriteDiv,
-  Main,
-  NameSpriteDiv,
-  NameSpan,
-  SpriteImg,
-  ContainerAside,
-} from "./style"
+import ContainerAsideDetails from "../../organism/ContainerAsideDetails"
+import ContainerSpriteDetails from "../../organism/ContainerSpriteDetails"
+import Main from "./style"
 
 function DetailsMain() {
   const { name } = useParams()
@@ -24,6 +16,7 @@ function DetailsMain() {
     if (name) {
       const result = await getPokemonByName(name)
       setDetails(result)
+      console.log(result)
     }
   }, [setDetails, name])
 
@@ -33,21 +26,8 @@ function DetailsMain() {
 
   return (
     <Main>
-      <ContainerSpriteDiv>
-        <NameSpriteDiv>
-          <SpriteImg
-            src={details?.sprites?.other["official-artwork"]?.front_default}
-          />
-          <NameSpan>
-            {details?.name?.toLocaleUpperCase()} Nº 0{details?.id}
-          </NameSpan>
-        </NameSpriteDiv>
-        <ContainerAside>
-          <BaseStatsContainer stats={details?.stats} />
-          <TypeContainerDetails types={details?.types} />
-        </ContainerAside>
-      </ContainerSpriteDiv>
-      <InforPokeDetails details={details} />
+      <ContainerSpriteDetails details={details} />
+      <ContainerAsideDetails details={details} />
     </Main>
   )
 }

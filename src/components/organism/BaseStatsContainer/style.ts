@@ -1,11 +1,5 @@
 import styled from "styled-components"
 
-export const BaseStatContainerSection = styled.section`
-  margin-left: 0.625rem;
-  width: 28rem;
-  font-size: 1.5rem;
-`
-
 export const ContainerWithNameDiv = styled.div`
   display: flex;
   flex-direction: column;

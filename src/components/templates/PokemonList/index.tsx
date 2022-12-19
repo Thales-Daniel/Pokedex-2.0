@@ -5,7 +5,7 @@ import { getPokemons, getByPokeType } from "../../../services/getPokemons"
 import { PokemonType } from "../../../shared/types/pokemonType"
 import NoPokemon from "../../molecules/NoPokeContainer"
 import PokemonCard from "../../molecules/PokemonCard"
-import TypeFilter from "../../molecules/TypeFilterPokeList"
+import TypeFilter from "../../organism/TypeFilterPokeList"
 import {
   PokeContainerContent,
   PokeList,
