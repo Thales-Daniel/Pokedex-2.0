@@ -1,16 +1,21 @@
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 
+export const PokeCardLi = styled.li`
+  list-style-type: none;
+`
+
 export const PokeCard = styled.button`
-  width: 20rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  border: none;
+  box-shadow: 0px 10px 51px -5px rgb(183 189 193 / 30%);
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   padding: 10px;
-  background-color: #ffffff;
-  box-shadow: 0px 10px 51px -5px rgb(183 189 193 / 30%);
-  border: none;
-  cursor: pointer;
-  border-radius: 0.75rem;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  width: 20rem;
 `
 
 export const PokeSprite = styled.img`

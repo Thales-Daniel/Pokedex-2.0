@@ -1,6 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components"
 
 import typeCardObject from "../../shared/utils/objectOfTypes"
+import { colorsType } from "../types/colorsTypes"
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -29,3 +30,16 @@ export const PokeSpanTypeCard = styled.span<{
   max-width: 6.875rem;
   width: 38.4375%;
 `
+
+export const colors: colorsType = {
+  "black-not-strong": "#343338",
+  "blue-classic": "#3d5fb4",
+  "blue-light": "#1A1B3A",
+  "gray-border": "#D9D9D9",
+  black: "#000",
+  gray: "gray",
+  green: "green",
+  red: "red",
+  white: "#FFFFFF",
+  whitesmoke: "#f5f5f5",
+}

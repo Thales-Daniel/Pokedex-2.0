@@ -12,6 +12,7 @@ import {
   PokeDescription,
   PokeTypeContainer,
   DetailsLink,
+  PokeCardLi,
 } from "./style"
 
 function PokemonCard({ url }: PokemonType) {
@@ -32,7 +33,7 @@ function PokemonCard({ url }: PokemonType) {
 
   if (sprites?.other["official-artwork"]?.front_default) {
     return (
-      <div>
+      <PokeCardLi>
         {isLoading ? (
           <SkeletonCards />
         ) : (
@@ -61,7 +62,7 @@ function PokemonCard({ url }: PokemonType) {
             </PokeTypeContainer>
           </PokeCard>
         )}
-      </div>
+      </PokeCardLi>
     )
   }
   return null

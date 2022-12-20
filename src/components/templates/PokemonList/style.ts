@@ -13,17 +13,17 @@ export const PokeContainerContent = styled.div`
   flex-wrap: wrap;
   justify-content: flex-start;
   min-height: calc(4.6875rem - 12.4688rem + 100vh);
-  position: relative;
   width: 100%;
 `
 
 export const PokeList = styled.ul`
   align-items: flex-start;
-  width: 90%;
   display: flex;
   flex-wrap: wrap;
   gap: 0.625rem;
   justify-content: flex-start;
+  text-decoration: none;
+  width: 90%;
 `
 
 export const PokeButton = styled.button`

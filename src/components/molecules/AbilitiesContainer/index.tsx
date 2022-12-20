@@ -1,6 +1,6 @@
 import React from "react"
 
-import { ContainerAbilityTypes } from "../../../shared/types/GlobalPropsTypes"
+import { ContainerAbilityTypes } from "../../../shared/types/globalPropsTypes"
 import OpenAbilityButton from "../../atoms/OpenAbilityButton"
 import { AbilitiesContainerDiv, AbilitiesValueP } from "./style"
 

@@ -4,7 +4,7 @@ export type ContainerAbilityTypes = {
   setOpenAbility: (_openAbility: string) => void
 }
 
-export type OpenAbilityButtonTypes = {
+export type AbilityButtonTypes = {
   setOpenAbility: (_ability: string) => void
   abilityName: string
 }

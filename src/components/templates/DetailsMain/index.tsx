@@ -16,7 +16,6 @@ function DetailsMain() {
     if (name) {
       const result = await getPokemonByName(name)
       setDetails(result)
-      console.log(result)
     }
   }, [setDetails, name])
 

@@ -1,6 +1,6 @@
 import React from "react"
 
-import pokeballImage from "../../shared/images/pokeLogo.png"
+import pokeballImage from "../../../shared/images/pokeLogo.png"
 import ImageLoader from "./style"
 
 function Loader() {

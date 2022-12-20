@@ -52,3 +52,13 @@ export const getTypesDetails = async (type: string) => {
     console.error(err)
   }
 }
+
+export const getAbility = async (ability: string) => {
+  try {
+    const url = `https://pokeapi.co/api/v2/ability/${ability}`
+    const { data } = await axios.get(url)
+    return data
+  } catch (err) {
+    console.error(err)
+  }
+}
