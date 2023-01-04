@@ -13,7 +13,7 @@ export const PokeCard = styled.button`
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 0.625rem;
   transform: matrix(1, 0, 0, 1, 0, 0);
   width: 20rem;
 `
@@ -23,6 +23,7 @@ export const PokeSprite = styled.img`
   height: 19rem;
   width: 19rem;
 `
+
 export const PokeDescription = styled.div`
   display: flex;
   flex-direction: column;
@@ -30,10 +31,10 @@ export const PokeDescription = styled.div`
 
 export const PokeId = styled.p`
   color: #919191;
-  font-size: 0.625rem;
+  font-size: 0.8rem;
 `
 
-export const PokeTittle = styled.h3`
+export const PokeTittle = styled.h2`
   color: #000;
   margin: 0.3125rem 0;
 `

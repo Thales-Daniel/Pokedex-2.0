@@ -23,12 +23,12 @@ export const PokeSpanTypeCard = styled.span<{
   color: ${(props) => typeCardObject[props.theme].color};
   display: flex;
   float: left;
-  font-size: ${(props) => (props.fontSize ? props.fontSize : "0.6875rem")};
-  height: ${(props) => (props.height ? props.height : "")};
+  font-size: ${(props) => (props.fontSize ? props.fontSize : "1rem")};
+  height: ${(props) => (props.height ? props.height : "1.5625rem")};
   justify-content: center;
   line-height: 1.125rem;
   max-width: 6.875rem;
-  width: 38.4375%;
+  width: 40%;
 `
 
 export const colors: colorsType = {

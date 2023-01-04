@@ -5,8 +5,8 @@ import { getPokemonByName } from "../../../services/getPokemons"
 import { PokemonDetails } from "../../../shared/types/pokemonType"
 import ContainerAsideDetails from "../../organism/ContainerAsideDetails"
 import ContainerSpriteDetails from "../../organism/ContainerSpriteDetails"
-import BackToDashLink from "../../atoms/BackToDashLink"
-import Main from "./style"
+import Main, { ContentContainer } from "./style"
+import DetailsHeader from "../../organism/DetailsHeader"
 
 function DetailsMain() {
   const { name } = useParams()
@@ -26,9 +26,11 @@ function DetailsMain() {
 
   return (
     <Main>
-      <ContainerSpriteDetails details={details} />
-      <ContainerAsideDetails details={details} />
-      <BackToDashLink />
+      <DetailsHeader />
+      <ContentContainer>
+        <ContainerSpriteDetails details={details} />
+        <ContainerAsideDetails details={details} />
+      </ContentContainer>
     </Main>
   )
 }

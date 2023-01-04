@@ -22,8 +22,7 @@ export const PokeList = styled.ul`
   flex-wrap: wrap;
   gap: 0.625rem;
   justify-content: flex-start;
-  text-decoration: none;
-  width: 90%;
+  width: 83%;
 `
 
 export const PokeButton = styled.button`
