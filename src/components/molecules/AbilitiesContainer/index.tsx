@@ -2,7 +2,7 @@ import React from "react"
 
 import { ContainerAbilityTypes } from "../../../shared/types/globalPropsTypes"
 import OpenAbilityButton from "../../atoms/OpenAbilityButton"
-import { AbilitiesContainerDiv, AbilitiesValueP } from "./style"
+import { AbilitiesContainerLi, AbilitiesValueP } from "./style"
 
 function AbilitiesContainer({
   title,
@@ -10,7 +10,7 @@ function AbilitiesContainer({
   setOpenAbility,
 }: ContainerAbilityTypes) {
   return (
-    <AbilitiesContainerDiv>
+    <AbilitiesContainerLi>
       {title}
       {value.map((item) =>
         !item.is_hidden ? (
@@ -23,7 +23,7 @@ function AbilitiesContainer({
           </AbilitiesValueP>
         ) : null
       )}
-    </AbilitiesContainerDiv>
+    </AbilitiesContainerLi>
   )
 }
 

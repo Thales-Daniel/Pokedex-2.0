@@ -5,6 +5,7 @@ import { getPokemonByName } from "../../../services/getPokemons"
 import { PokemonDetails } from "../../../shared/types/pokemonType"
 import ContainerAsideDetails from "../../organism/ContainerAsideDetails"
 import ContainerSpriteDetails from "../../organism/ContainerSpriteDetails"
+import BackToDashLink from "../../atoms/BackToDashLink"
 import Main from "./style"
 
 function DetailsMain() {
@@ -27,6 +28,7 @@ function DetailsMain() {
     <Main>
       <ContainerSpriteDetails details={details} />
       <ContainerAsideDetails details={details} />
+      <BackToDashLink />
     </Main>
   )
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const AbilitiesContainerDiv = styled.div`
+export const AbilitiesContainerLi = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

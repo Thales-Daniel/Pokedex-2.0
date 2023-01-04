@@ -11,7 +11,7 @@ export const AbilitiesInforDiv = styled.div`
   gap: 35px;
   font-size: 1.0625rem;
   height: 15.625rem;
-  width: 26rem;
+  width: 28rem;
 `
 
 export const HeaderAbilities = styled.header`

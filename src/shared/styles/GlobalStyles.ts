@@ -34,7 +34,7 @@ export const PokeSpanTypeCard = styled.span<{
 export const colors: colorsType = {
   "black-not-strong": "#343338",
   "blue-classic": "#3d5fb4",
-  "blue-light": "#1A1B3A",
+  "blue-light": "#30a7d7",
   "gray-border": "#D9D9D9",
   black: "#000",
   gray: "gray",

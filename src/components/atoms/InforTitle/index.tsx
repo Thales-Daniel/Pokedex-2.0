@@ -1,6 +1,6 @@
 import React from "react"
 
-import { InforTitleDiv, InforValueP } from "./style"
+import { InforTitleLi, InforValueP } from "./style"
 
 function InforTitle({
   title,
@@ -10,10 +10,10 @@ function InforTitle({
   value: string | number
 }) {
   return (
-    <InforTitleDiv>
+    <InforTitleLi>
       {title}
       <InforValueP>{value}</InforValueP>
-    </InforTitleDiv>
+    </InforTitleLi>
   )
 }
 

@@ -7,9 +7,9 @@ const InforContainerDiv = styled.ul`
   display: grid;
   font-size: 1.0625rem;
   grid-template-columns: 2fr 2fr;
-  height: 15.625rem;
-  padding: 10px 0 0 30px;
-  width: 26rem;
+  height: 16rem;
+  padding: 20px 0 0 30px;
+  width: 28rem;
 `
 
 export default InforContainerDiv
