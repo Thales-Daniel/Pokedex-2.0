@@ -1,46 +1,103 @@
-# Getting Started with Create React App
+# Boas vindas ao repositório Project-Bank-Transfer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este Projeto tem como finalidade estruturar uma aplicação web fullstack, cujo objetivo seja possibilitar que usuários do banco consigam realizar transferências internas entre si
 
-## Available Scripts
+<br/><br/>
 
-In the project directory, you can run:
+# Sumário
 
-### `yarn start`
+- [Instruções](#instruções)
+- [Tecnologias](#tecnologias)
+- [Executando o projeto](#executando-o-projeto)
+- [Proximos passos](#proximos-passos)
+- [Principal Desafio](#desafio-principal)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br/><br/>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Instruções:
 
-### `yarn test`
+Primeiro clone o repositorio para sua máquina local
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git@github.com:Thales-Daniel/Project-Bank-Transfer.git
+```
 
-### `yarn build`
+após isso entre na pasta do repositorio
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+cd Project-Bank-Transfer
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Logo em seguida, execute o comando para instalar as dependencias:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+yarn install:all
+```
 
-### `yarn eject`
+O proximo passo é rodar o comando abaixo para atualizar o banco de dados com a migraçao atual do prisma.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+yarn run prisma
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+E para finalizar, inicie o projeto rodando o comando a baixo:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+yarn start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Tecnologias
 
-## Learn More
+O front-end do projeto foi desenvolvido em React.js com o gerenciador de estado Context-api, foram utilizadas as bibliotecas a baixo para auxiliar o desenvolvimento do projeto.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `Axios`
+- `eslint`
+- `React-router-dom`
+- `Styled-components`
+- `Typescript`
+- `React`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<div align="center">
+  <img alt="typescript" height="60" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
+  <img alt="react" height="60" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+  <img alt="eslint" height="60" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg" />
+  <img alt="axios" height="60" width="80" src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Axios_logo_%282020%29.svg" />
+  &nbsp
+  <img alt="styled-components" height="60" width="70" src="https://www.styled-components.com/atom.png" />
+  <br />
+  <br />
+</div>
+  
+# Executando o projeto
+
+`Front-end`
+<br/><br/>
+
+- Login
+  ![Login](https://user-images.githubusercontent.com/82240828/210466279-b899a709-dfd3-4145-8348-4f96d0b8b662.gif)
+- Dashboard
+
+  ![dashboard](https://user-images.githubusercontent.com/82240828/210466268-ba9cf420-ce37-4a08-ae5b-e30fb0cc03cf.gif)
+
+- Register
+
+  ![register and logof](https://user-images.githubusercontent.com/82240828/210466283-f979b52b-1ae1-4a22-8d9f-3af55f6e8a46.gif)
+
+- Versão mobile
+
+  ![Captura de tela de 2023-01-03 22-14-13](https://user-images.githubusercontent.com/82240828/210466766-2f5c7863-6643-4c76-94ff-a4cdc3eb76fe.png)
+
+  <br/><br/>
+
+<br/><br/>
+
+# Desafio Principal
+
+O principal desafio do projeto foi organizar por onde seria iniciado a produção, alem disso, houveram problemas na hora da dockerização do back-end que me impediram de concluir 100% do projeto.
+
+<br/><br/>
+
+# Proximos passos
+
+O proximo passo seria iniciar os testes do projeto, alem de criar novas
+Freatures como por exemplo, uma função de depositar.
