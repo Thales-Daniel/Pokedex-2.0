@@ -1,6 +1,6 @@
 # Boas vindas ao repositório Pokedex!
 
-Este repositório tem como objetivo criar um aplicação utilizando a [PokeApi](https://pokeapi.co/) como base para listar todos os pokemons existentes nela. Desde já, agradeço a visita!
+Este repositório tem como objetivo criar um aplicação utilizando a [PokeApi](https://pokeapi.co/) como base para listar todos os pokemons existentes nela. Caso queria visitar a aplicação, o link é o seguinte: [Pokedex-2.0.vercel.app](pokedex-2-0-zeta.vercel.app)
 
 <p>&nbsp</p>
 
@@ -72,12 +72,12 @@ Esse projeto foi desenvolvido em React.js, Typescript e o gerenciador de estado 
 
 Navegando!!
 
+![Peek 06-01-2023 15-52](https://user-images.githubusercontent.com/82240828/211083326-70bce76a-14ad-44ba-b8f7-9abc585d132a.gif)
+
 <p>&nbsp</p>
 
 # Proximos passos
 
-Para melhorar a aplicação, iria ser feito a componentização do código ainda mais,
-assim eu iria melhorar a manutenção e a organização para futuras expansões. Além disso,
-seria desenvolvido os testes para deixar a aplicação completa e evitar possivel erros.
+Para melhorar a aplicação, daria inicio aos testes unitarios e integrados para manter sempre o código seguro.
 
 <p>&nbsp</p>
