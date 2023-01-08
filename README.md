@@ -1,6 +1,6 @@
 # Boas vindas ao repositório Pokedex!
 
-Este repositório tem como objetivo criar um aplicação utilizando a [PokeApi](https://pokeapi.co/) como base para listar todos os pokemons existentes nela. Caso queria visitar a aplicação, o link é o seguinte: [Pokedex-2.0.vercel.app](pokedex-2-0-zeta.vercel.app)
+Este repositório tem como objetivo criar um aplicação utilizando a [PokeApi](https://pokeapi.co/) como base para listar todos os pokemons existentes nela. Caso queria visitar a aplicação, o link é o seguinte: [Pokedex-2.0.vercel.app](https://pokedex-2-0-zeta.vercel.app/)
 
 <p>&nbsp</p>
 
