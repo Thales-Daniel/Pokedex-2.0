@@ -22,9 +22,10 @@ function InputFilter({ setName }: Props) {
   }
 
   return (
-    <InputContainer>
-      <Label>
+    <InputContainer  onSubmit={(event) => HandleSubmit(event)}>
+      <Label htmlFor="fildSearch">
         <PokeInput
+          id="fieldSearch"
           value={inputValue}
           type="text"
           placeholder="Find Your Pokemon"
@@ -32,7 +33,6 @@ function InputFilter({ setName }: Props) {
         />
         <PokeButtonSearch
           type="submit"
-          onClick={(event) => HandleSubmit(event)}
         >
           <ImagemSearch src={lupa} alt="lupa" />
         </PokeButtonSearch>

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const InputContainer = styled.div`
+export const InputContainer = styled.form`
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -13,7 +13,7 @@ export const PokeInput = styled.input`
   border: solid gray 0.0625rem;
   width: 100%;
   height: 2rem;
-  padding: 0 0.9375rem;
+  padding:  0.9375rem;
   font-size: large;
 `
 export const Label = styled.label`
