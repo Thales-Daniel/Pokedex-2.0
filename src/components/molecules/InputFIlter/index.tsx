@@ -16,13 +16,14 @@ type Props = {
 function InputFilter({ setName }: Props) {
   const [inputValue, setInputValue] = useState("")
 
-  const HandleSubmit = (event: any) => {
-    event.preventDefault()
+  const HandleSubmit = (event: React.FormEvent<EventTarget>) => {
+    const target = event.target as HTMLFormElement
+    target.preventDefault()
     setName(inputValue)
   }
 
   return (
-    <InputContainer  onSubmit={(event) => HandleSubmit(event)}>
+    <InputContainer onSubmit={(event) => HandleSubmit(event)}>
       <Label htmlFor="fildSearch">
         <PokeInput
           id="fieldSearch"
@@ -31,9 +32,7 @@ function InputFilter({ setName }: Props) {
           placeholder="Find Your Pokemon"
           onChange={({ target }) => setInputValue(target.value)}
         />
-        <PokeButtonSearch
-          type="submit"
-        >
+        <PokeButtonSearch type="submit">
           <ImagemSearch src={lupa} alt="lupa" />
         </PokeButtonSearch>
       </Label>
